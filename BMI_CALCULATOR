@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class bmi_calculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ //Create variables
+		
+		double mass ;
+		double height ;
+		double bmi;
+		//Define the Scanner class
+		//Get value from user
+		Scanner inp = new Scanner(System.in);
+		        
+		        System.out.print("Please Enter Mass in kilograms: ");
+		        mass = inp.nextDouble();
+		        
+		        System.out.print("Please Enter Height in meters: ");
+		        height = inp.nextDouble();
+		        
+		        bmi = mass / (height * height) ; 
+		        System.out.print("BMI: " +bmi );
+	}
+
+}
