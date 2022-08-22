@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class circle_perimeter_area {
+	public static void main(String[] args) {
+        
+		 //Create variables
+		
+		double pi = 3.14;
+		double area;
+		double perimeter;
+		double radius;
+		double center_Angle;
+		//Define the Scanner class
+		//Get value from user
+        Scanner inp = new Scanner(System.in);
+        
+        System.out.print("Please Enter Radius: ");
+        radius = inp.nextDouble();
+        
+        System.out.print("Please Enter Center Angle: ");
+        center_Angle = inp.nextDouble();
+        
+        area = (pi* radius * radius * center_Angle)/360;
+        System.out.print("Area: " + area);
+}
+}
