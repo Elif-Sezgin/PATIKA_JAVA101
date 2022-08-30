@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class User {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String userName, password, newPassword;
+		int selection = 0;
+		//Define the Scanner class
+	    Scanner inp = new Scanner(System.in);
+	    //Get value from user
+	    System.out.print("Username : ");
+	    userName = inp.nextLine();
+	    System.out.print("Password : ");
+	    password = inp.nextLine();
+	    
+	    //Eğer şifre yanlış ise kullanıcıya şifresini sıfırlayıp sıfırlamayacağını sorun, 
+	    //eğer kullanıcı sıfırlamak isterse yeni girdiği şifrenin hatalı girdiği ve 
+	    //unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip , 
+	    //şifreler aynı ise ekrana "Şifre oluşturulamadı, lütfen başka şifre giriniz." 
+	    //sorun yoksa "Şifre oluşturuldu" yazan programı yazınız.
+	    boolean kontrol1 = userName.equals("patika");
+	    boolean kontrol2 = password.equals("1234");
+	    
+	    
+	    if (kontrol1 == true && kontrol2 == true) {
+	    	System.out.println("Login successful");
+	    }
+	    else if (kontrol1 == true && kontrol2 == false) {
+	    	System.out.println("Wrong Password, Press 1 to change the password");
+		    selection = inp.nextInt();
+	
+	    switch(selection) {
+	    case 1:
+	    	Scanner input = new Scanner(System.in);
+	    	System.out.print("Please enter new password: ");
+	    	newPassword = input.nextLine();
+	    	if (newPassword.equals("1234")) {
+	    		System.out.print("New password can not be the same with the old password, please try again");
+	    	}
+	    	else {
+	    		System.out.print("Password changed");
+	    	}
+	    	
+	    	break;
+	    default:
+	    	System.out.println("Exit ");
+	    }
+	  
+	    }
+	}
+
+}
