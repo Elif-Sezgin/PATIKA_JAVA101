@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class havadurumu_etkinlik {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int sicaklik;
+//Define the Scanner class
+Scanner inp = new Scanner(System.in);
+
+//Get values from user
+System.out.print("Lütfen hava sıcaklığını giriniz : ");
+sicaklik = inp.nextInt();
+if (sicaklik>25) {
+	System.out.print("Önerilen etkinlik : Yüzme ");
+}
+else if (sicaklik < 5){
+	System.out.print("Önerilen etkinlik : Kayak ");
+}
+else if ((5<= sicaklik) && (sicaklik<= 15)){
+	System.out.print("Önerilen etkinlik : Sinema veya Piknik ");
+}
+else if ((15< sicaklik) && (sicaklik<= 25)){
+	System.out.print("Önerilen etkinlik : Piknik ");
+}
+	}
+
+}
