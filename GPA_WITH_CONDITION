@@ -1,0 +1,63 @@
+
+import java.util.Scanner;
+
+public class NotOrtalamasi {
+    public static void main(String[] args) {
+        //Create variables
+        int math, physics, chemical, language, history, music; 
+      
+        int total = 0;
+        int validCourseNumber = 0;
+
+        //Define the Scanner class
+        Scanner inp = new Scanner(System.in);
+
+        //Get values from user
+        System.out.print("Math Grade : ");
+        math = inp.nextInt();
+        if (! (math < 0 || math > 100))  {
+        total += math;
+        validCourseNumber ++ ;
+        }
+        System.out.print("Physics Grade : ");
+        physics = inp.nextInt();
+        if (! (physics < 0) ||  (physics > 100))  {
+            total += physics;
+            validCourseNumber ++ ;
+        }
+        System.out.print("Chemical Grade : ");
+        chemical = inp.nextInt();
+        if (! (chemical < 0) ||  (chemical > 100))  {
+            total += chemical;
+            validCourseNumber ++ ;
+        }
+        System.out.print("Language Grade : ");
+        language = inp.nextInt();
+        if (! (language < 0) ||  (language > 100))  {
+            total += language;
+            validCourseNumber ++ ;
+        }
+        System.out.print("History Grade : ");
+        history = inp.nextInt();
+        if (! (history < 0) ||  (history > 100))  {
+            total += history;
+            validCourseNumber ++ ;
+        }
+        System.out.print("Music Grade : ");
+        music = inp.nextInt();
+        if (! (music < 0) ||  (music > 100))  {
+            total += music;
+            validCourseNumber ++ ;
+        }
+        int average = total / validCourseNumber ;
+        System.out.println("Avarage" + total);
+        System.out.println(validCourseNumber);
+        System.out.println(average);
+
+
+        //Condition expression
+        String Situation  = (average >= 60) ? "congratulations you made it ": "Sorry, you failed ";
+        System.out.println("Success status: "+Situation);
+    }
+
+}
