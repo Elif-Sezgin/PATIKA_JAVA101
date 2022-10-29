@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class AIRPLANE_TICKET {
+	public static void main(String[] args) {
+        int distance;
+        int age;
+        int ticket_type;
+        double price;
+      //Define the Scanner class
+      Scanner inp = new Scanner(System.in);
+      //Get value from user
+      System.out.print("Distance[km]: ");
+      distance = inp.nextInt();
+      if (distance <= 0) {
+    	  System.out.print("Invalid data\nPlease enter again\n");  
+          //Get value from user
+          System.out.print("Distance[km] : ");
+          distance = inp.nextInt();
+      }
+      
+      System.out.print("Age: ");
+      age = inp.nextInt();
+      System.out.print("Please enter ticket type\n1 => one way 2 => return  ");
+      ticket_type = inp.nextInt();
+      if (ticket_type <2 ) {
+      price = (0.1 * distance) ;
+      }
+      else {
+    	  price = (0.1 * 2* distance) ;
+      }
+      System.out.print("Ticket Price:" + price );
+      if (age < 12) {    	 
+          price = 0.5*price;
+      }
+      if ( age > 12 && age < 24) {     	 
+          price = 0.9*price;         
+          }
+      if ( age > 65 ) {      	 
+          price = 0.7*price;         
+          }
+      if (ticket_type == 2) {
+    	  price = 0.8*price;
+      }
+      System.out.print("\nDiscounted Ticket Price:" + price);
+      } 
+	}
